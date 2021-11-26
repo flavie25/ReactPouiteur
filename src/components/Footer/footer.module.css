@@ -1,0 +1,27 @@
+.footer {
+  background-color: rgb(245, 255, 85);
+  border-top: 2px solid #000;
+  display: flex;
+  color: gray;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footerItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 0;
+}
+
+.footerItem:nth-child(2){
+  border: 0 1px solid black;
+}
+.footerLogo{
+  width: 30%;
+  object-fit: contain;
+}
+

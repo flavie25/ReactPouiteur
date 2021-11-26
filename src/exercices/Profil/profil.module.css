@@ -1,0 +1,57 @@
+.profilInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgProfil{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.imgUser{
+    width: 100%;
+    object-fit: contain;
+}
+
+.button{
+    background-color: rgb(245, 255, 85);
+    color: #000;
+    padding: 0.3em 0.6em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    width: 200px;
+    height: 30px;
+}
+
+.formNotDeploy{
+    display: flex;
+    flex-direction: column;
+    height: 2px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+    
+
+.form{
+    transition: 0.3s ease-in-out;
+    height: auto;
+    opacity: 1;
+}
+
+.formItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
