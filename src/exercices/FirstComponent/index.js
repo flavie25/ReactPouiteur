@@ -9,15 +9,8 @@ const FirstComponent= () => {
       <Button prename="j'adore">Cool </Button>
       <Button > Chouette </Button>
       First component
-      <SecondComponent
-        color="red"
-      >
-        Second component children
-      </SecondComponent>
-
-      <SecondComponent>
-        Second component children green please
-      </SecondComponent>
+      <SecondComponent color="red"> Second component children </SecondComponent>
+      <SecondComponent> Second component children green please </SecondComponent>
     </div>
   )
 }
