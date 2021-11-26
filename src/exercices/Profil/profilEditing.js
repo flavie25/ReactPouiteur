@@ -40,16 +40,16 @@ const ProfilEditing = () =>{
                 </div>
                 <h1>{newpseudo}</h1>
                 <p>{newdescription}</p>
-                <Button function={profilModify} text="Modifier le profil"/>    
+                <Button onClick={profilModify} text="Modifier le profil"/>    
             </div> 
             <div className={styles.form}>
                 <div className={styles.formWrap}>
                     <LblTxt textLabel="Pseudo" valeur={pseudo} surchange={lorsDuChangementPseudo}/>
-                    <Button function={pseudoModify} text="Modifier le pseudo"/>
+                    <Button onClick={pseudoModify} text="Modifier le pseudo"/>
                 </div>
                 <div className={styles.formWrap}>
                     <Textarea textLabel="Description" change={lorsDuChangementDesc}></Textarea>
-                    <Button function={descModify} text="Modifier la description"/>
+                    <Button onClick={descModify} text="Modifier la description"/>
                 </div>
             </div>
         </div>      
