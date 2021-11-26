@@ -27,9 +27,20 @@
     height: 30px;
 }
 
-.form{
+.formNotDeploy{
     display: flex;
     flex-direction: column;
+    height: 2px;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+    
+
+.form{
+    transition: 0.3s ease-in-out;
+    height: auto;
+    opacity: 1;
 }
 
 .formItem{
