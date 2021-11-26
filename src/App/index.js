@@ -9,6 +9,7 @@ import StylingComponentsExercice from 'exercices/StylingComponents'
 import SpotifyExercice from 'exercices/Spotify'
 import ContextsExercice from 'exercices/Contexts'
 import Profil from 'exercices/Profil'
+import Pouit from 'exercices/Pouit'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
       <Switch>
         <Route exact path="/profil">
           <Profil />
+        </Route>
+        <Route exact path="/pouit">
+          <Pouit />
         </Route>
         <Route exact path="/first-component">
           <FirstComponentExercice />

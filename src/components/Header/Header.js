@@ -7,6 +7,9 @@ const Header = () => {
     <div className={styles.header}>
       Cours React
       <ul className={styles.menu}>
+      <li>
+          <Link to="/pouit" className={styles.menuItem}>POUITEUH</Link>
+        </li>
         <li>
           <Link to="/first-component" className={styles.menuItem}>Premier composant</Link>
         </li>

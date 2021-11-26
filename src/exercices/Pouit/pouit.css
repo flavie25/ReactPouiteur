@@ -1,0 +1,29 @@
+.pouitContainer{
+    margin: 50px 20px;
+    border-radius: 5px;
+    box-shadow: #80808033 13px 5px 11px 6px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.pouitTop{
+    display: flex;
+    justify-content: space-between;
+    padding: 0em 2em;
+}
+
+.pouitMiddle{
+    text-align: center;
+    padding: 1em 2em;
+}
+
+.pouitEnd{
+    text-align: center;
+    padding: 1em 2em;
+}
+
+.button{
+    border-radius: 10px;
+    box-shadow: black 2px 3px;
+}
