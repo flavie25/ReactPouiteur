@@ -25,9 +25,7 @@ const Pouit = () => {
         setPouitContent(e.target.value)
     }
 
-    // console.log( Date());
-
-
+    console.log( pouits);
 
     return(
         <div>

@@ -64,8 +64,6 @@ const Profil = () =>{
                     <Button onClick={descModify} button="Modifier la description"/>
                 </div>
             </div>
-            <h1>{newpseudo}</h1>
-                <p>{newdescription}</p>
         </div>      
     )
 }

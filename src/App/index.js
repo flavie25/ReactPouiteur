@@ -5,12 +5,8 @@ import Header from "components/Header";
 import Footer from "../components/Footer/footer";
 
 // Exercices
-import FirstComponentExercice from 'exercices/FirstComponent'
-import StylingComponentsExercice from 'exercices/StylingComponents'
-import SpotifyExercice from 'exercices/Spotify'
-import ContextsExercice from 'exercices/Contexts'
-import Profil from 'exercices/Profil'
-import Pouit from 'exercices/Pouit'
+import Profil from 'pages/Profil'
+import Pouit from 'pages/Pouit'
 
 function App() {
   return (
@@ -24,20 +20,8 @@ function App() {
         <Route exact path="/pouit">
           <Pouit />
         </Route>
-        <Route exact path="/first-component">
-          <FirstComponentExercice />
-        </Route>
-        <Route exact path="/styling-components">
-          <StylingComponentsExercice />
-        </Route>
-        <Route exact path="/spotify">
-          <SpotifyExercice />
-        </Route>
-        <Route exact path="/contexts">
-          <ContextsExercice />
-        </Route>
         <Route path="/">
-          <FirstComponentExercice />
+          <Profil />
         </Route>
       </Switch>
     </BrowserRouter>
