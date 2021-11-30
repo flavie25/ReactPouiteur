@@ -8,6 +8,21 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  padding: 0.5em 0;
+}
+.footerItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.footerItems a{
+  text-decoration: none;
+  color: #000;
+  margin: 0;
+  padding: 0;
 }
 
 .footerItem {
@@ -20,8 +35,31 @@
 .footerItem:nth-child(2){
   border: 0 1px solid black;
 }
+
 .footerLogo{
   width: 30%;
   object-fit: contain;
 }
+
+
+
+@media (min-width: 900px) {
+
+  .footerLogo{
+    width: 20%;
+    object-fit: contain;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .footerLogo{
+    width: 10%;
+    object-fit: contain;
+  }
+
+}
+
+
 

@@ -2,6 +2,9 @@ import React from 'react'
 import user from './../../Assets/user.png'
 import styles from './profil.module.css'
 import clsx from 'clsx'
+import Button from 'components/Button'
+import Textarea from 'components/TextArea'
+
 
 const LblTxt  = (props) => {
     return (
@@ -11,20 +14,6 @@ const LblTxt  = (props) => {
         </div>
     )
 }
-const Textarea  = (props) => {
-    return (
-        <div className={styles.formItem}>
-            <label>{props.textLabel}</label>
-            <textarea value={props.text} onChange={props.change}></textarea>
-        </div>
-    )
-}
-const Button  = (props) => {
-    return (
-        <button className={styles.button} onClick={props.function}>{props.text}</button>
-    )
-}
-
 
 const Profil = () =>{
     const [pseudo, setPseudo] = React.useState('Pseudo')
@@ -63,16 +52,16 @@ const Profil = () =>{
                 </div>
                 <h1>{newpseudo}</h1>
                 <p>{newdescription}</p>
-                <Button onClick={profilModify} text="Modifier le profil"/>    
+                <Button onClick={profilModify} button="Modifier le profil"/>    
             </div> 
             <div className={clsx(styles.formNotDeploy, {[styles.form]: deploy})}>
                 <div className={styles.formWrap}>
                     <LblTxt textLabel="Pseudo" valeur={pseudo} surchange={lorsDuChangementPseudo}/>
-                    <Button onClick={pseudoModify} text="Modifier le pseudo"/>
+                    <Button onClick={pseudoModify} button="Modifier le pseudo"/>
                 </div>
                 <div className={styles.formWrap}>
                     <Textarea textLabel="Description" change={lorsDuChangementDesc}></Textarea>
-                    <Button onClick={descModify} text="Modifier la description"/>
+                    <Button onClick={descModify} button="Modifier la description"/>
                 </div>
             </div>
             <h1>{newpseudo}</h1>
