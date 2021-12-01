@@ -12,7 +12,7 @@ const LblTxt  = (props) => {
     return (
         <div className={styles.formItem}>
             <label>{props.textLabel}</label>
-            <input value={props.valeur} onChange={props.surchange}></input>
+            <input value={props.valeur} onChange={props.surchange} placeholder={props.placeholder}></input>
         </div>
     )
 }
@@ -67,7 +67,7 @@ const Profil = () =>{
             </div> 
             <div className={clsx(styles.formNotDeploy, {[styles.form]: deploy})}>
                 <div className={styles.formWrap}>
-                    <LblTxt textLabel="Pseudo" valeur={pseudo} surchange={lorsDuChangementPseudo}/>
+                    <LblTxt textLabel="Pseudo"  surchange={lorsDuChangementPseudo} placeholder="Entrez votre pseudo..."/>
                     <Button onClick={pseudoModify} button="Modifier le pseudo"/>
                 </div>
                 <div className={styles.formWrap}>

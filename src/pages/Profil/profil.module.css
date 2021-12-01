@@ -37,13 +37,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    width: 100%;
+}
+
+input{
+    width: 100%;
+    border: black solid 3px;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 16px;
 }
 
 .formWrap{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+
 }
 
 .onglets{
@@ -51,6 +61,7 @@
     padding: 0.5em 1em;
     justify-content: space-around;
 }
+
 
 @media (min-width: 900px) {
 
