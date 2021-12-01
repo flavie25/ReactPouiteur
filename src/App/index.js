@@ -11,9 +11,14 @@ import Pouit from 'pages/Pouit'
 import Contest from "pages/Contest";
 
 import Context from "../contexts/AppContext";
+import PouitCard from "./../components/PouitCard"
 
 function App() {
-  const [pouits, setPouits] = useState([])
+  const [pouits, setPouits] = useState([
+    { pseudo:'GrenouilleBoarp', date:'18/01 à 18h18', content:'Qu\'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan.', like: false},
+    { pseudo:'ManuReact', date:'18/01 à 18h18', content:'Où va Messi quand il se blesse ? ... A LA PHARMESSI PTDRRRRR', like: false},
+    { pseudo:'Flaviie25', date:'27/11 à 10h06', content:'Qu\'est-ce qui est bleu, blanc, rouge ? Un Schrtoumph qui saigne du nez.', like: false}
+    ])
   const [pouitLiked, setPouitLiked] = useState([])
   
   const addPouit = (newPouit) => {
