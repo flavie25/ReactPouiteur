@@ -4,6 +4,7 @@ import styles from './profil.module.css'
 import clsx from 'clsx'
 import Button from 'components/Button'
 import Textarea from 'components/TextArea'
+import PouitCard from 'components/PouitCard'
 
 
 const LblTxt  = (props) => {
@@ -63,6 +64,11 @@ const Profil = () =>{
                     <Textarea textLabel="Description" change={lorsDuChangementDesc}></Textarea>
                     <Button onClick={descModify} button="Modifier la description"/>
                 </div>
+            </div>
+            <div className={styles.onglets}>
+                <h2>Mes pouits</h2>
+                <PouitCard pseudo="GrenouilleBoarp" date="18/01 à 18h18" pouit="deded"/>
+                <h2>Mes Likes</h2>
             </div>
         </div>      
     )

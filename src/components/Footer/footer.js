@@ -9,8 +9,8 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div className={styles.footerItems}>
-        <Link to="/styling-components" className={styles.footerItem}><img className={styles.footerLogo} src={contest}/></Link>
-        <Link to="/styling-components" className={styles.footerItem}>Concours</Link>
+        <Link to="/contest" className={styles.footerItem}><img className={styles.footerLogo} src={contest}/></Link>
+        <Link to="/contest" className={styles.footerItem}>Concours</Link>
       </div>
       <div className={styles.footerItems}>
         <Link to="/pouit" className={styles.footerItem}><img className={styles.footerLogo} src={home}/></Link>

@@ -1,14 +1,15 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import PouitCard from "components/PouitCard"
 import Button from 'components/Button'
 import './pouit.css'
 import Textarea from "../../components/TextArea"
+import AppContext from "../../contexts/AppContext"
 
 
 // FIN DES COMPOSANTS ---------------------------------------------------------------------------------------------------------
 
 const Pouit = () => {
-    const [pouits, setPouits] = useState([])
+    const { pouits, addPouit } = useContext(AppContext)
     const [pouitContent, setPouitContent] = useState('')
     
     const handleSubmit = (e) => {
@@ -16,17 +17,24 @@ const Pouit = () => {
 
         const formData = new FormData(e.target)
         const newPouit = {
-            content: formData.get('textContent')
+            id: Math.floor(Math.random() * 100),
+            content: formData.get('textContent'),
+            pseudo: 'GrenouilleBoarp',
+            date: '18/01 à 18h18',
+            like: false
         }
-
-        // reset
-        setPouits([newPouit, ...pouits])
+        addPouit(newPouit)
     }
     const onTextContentChange = (e) => {
         setPouitContent(e.target.value)
     }
 
-    console.log( pouits);
+    const TabPouit = () => {
+        const tab = pouits.map((pouit) => (
+            <PouitCard {...pouit} />
+        ))
+        return tab
+    }
 
     return(
         <div>
@@ -35,13 +43,13 @@ const Pouit = () => {
                 <input className="inputsend" type="submit" value="Envoyer" />
             </form>
 
-            {pouits.map((pouit) => (
-                <PouitCard pseudo="GrenouilleBoarp" date="18/01 à 18h18" pouit={pouit.content} />
-            ))}
 
-            <PouitCard pseudo="ManuREACT" date="30/02 à 19h45" pouit="Où va Messi quand il est blessé ? ...A LA PHARMESSI MDRRRR" />
-            <PouitCard pseudo="GrenouilleBoarp" date="18/01 à 18h18" pouit="Qu'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan." />
-            <PouitCard pseudo="Flaviie25" date="27/11 à 10h06" pouit="Qu'est-ce qui est bleu, blanc, rouge ? Un Schrtoumph qui saigne du nez." />
+            <TabPouit/>
+
+            <PouitCard pseudo="ManuREACT" date="30/02 à 19h45" content="Où va Messi quand il est blessé ? ...A LA PHARMESSI MDRRRR" />
+            <PouitCard pseudo="GrenouilleBoarp" date="18/01 à 18h18" content="Qu'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan." />
+            <PouitCard pseudo="GrenouilleBoarp" date="18/01 à 18h18" content="Qu'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan." />
+            <PouitCard pseudo="Flaviie25" date="27/11 à 10h06" content="Qu'est-ce qui est bleu, blanc, rouge ? Un Schrtoumph qui saigne du nez." />
         </div>
 
     )
