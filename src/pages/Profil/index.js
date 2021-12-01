@@ -63,19 +63,20 @@ const Profil = () =>{
                 </div>
                 <h1>{newpseudo}</h1>
                 <p>{newdescription}</p>
-                <Button onClick={profilModify} button="Modifier le profil"/>    
+                <Button style={styles.button} onClick={profilModify} button="Modifier le profil"/>    
             </div> 
             <div className={clsx(styles.formNotDeploy, {[styles.form]: deploy})}>
                 <div className={styles.formWrap}>
                     <LblTxt textLabel="Pseudo"  surchange={lorsDuChangementPseudo} placeholder="Entrez votre pseudo..."/>
-                    <Button onClick={pseudoModify} button="Modifier le pseudo"/>
+                    <Button style={styles.button} onClick={pseudoModify} button="Modifier le pseudo"/>
                 </div>
                 <div className={styles.formWrap}>
                     <Textarea textLabel="Description" change={lorsDuChangementDesc} placeholder="Ecrivez votre description..."></Textarea>
-                    <Button onClick={descModify} button="Modifier la description"/>
+                    <Button  style={styles.button} onClick={descModify} button="Modifier la description"/>
                 </div>
             </div>
             <div className={styles.onglets}>
+                <Button style={styles.buttonLink} onClick={profilModify} button="Mes Pouits"/> 
                 <h2>Mes pouits</h2>
                 <TabPouitLike/>
                 <h2>Mes Likes</h2>
