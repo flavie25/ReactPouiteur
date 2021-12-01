@@ -3,9 +3,9 @@ import {Link} from 'react-router-dom'
 import styles from './button.module.css'
 
        
-const Button = ({onClick, content, children}) => {
+const Button = ({onClick, button, children}) => {
     return (
-        <button className={styles.button} onClick={onClick}>{content}{children}</button>  
+        <button className={styles.button} onClick={onClick}>{button}{children}</button>  
     )
 }
 

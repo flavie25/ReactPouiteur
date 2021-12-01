@@ -2,9 +2,9 @@ import React, { useContext, useState } from "react"
 import PouitCard from "components/PouitCard"
 import Button from 'components/Button'
 import './pouit.css'
-import Textarea from "../../components/TextArea"
+import Textarea from "components/TextArea"
 import AppContext from "../../contexts/AppContext"
-import Textarea from "../../components/TextArea"
+
 
 
 // FIN DES COMPOSANTS ---------------------------------------------------------------------------------------------------------
