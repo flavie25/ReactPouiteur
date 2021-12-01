@@ -1,11 +1,12 @@
 import React from "react"
+import style from "./textarea.module.css"
 
 
 const Textarea  = (props) => {
     return (
-        <div >
+        <div>
             <label>{props.textLabel}</label>
-            <textarea value={props.text} onChange={props.change}></textarea>
+            <textarea className={style.textarea} value={props.text} onChange={props.change}></textarea>
         </div>
     )
 }
