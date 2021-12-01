@@ -1,7 +1,12 @@
+.textareaContainer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .textarea{
     resize: none;
     height: 100px;
-    width: 500px;
     border-radius: 5px;
     border: 3px solid black;
     font-size: 16px;

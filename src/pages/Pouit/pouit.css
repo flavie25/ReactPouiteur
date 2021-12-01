@@ -34,6 +34,8 @@
 form{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    padding: 1em;
 }
 
 .inputsend{
@@ -48,3 +50,12 @@ form{
     margin: 1em;
     margin-top: 6em;
 }
+
+
+@media (min-width: 900px) {
+
+    form{
+        flex-direction: row;
+    }
+  
+  }
