@@ -17,7 +17,7 @@ const PouitCard  = (props) => {
         //   setPouits[pouitId].like = false
         //   console.log("dislkier")
         // }
-      }
+    }
 
     return (
         <div id={"pouit-" + props.id} className = "pouitContainer">

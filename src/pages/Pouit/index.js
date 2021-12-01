@@ -3,6 +3,7 @@ import PouitCard from "components/PouitCard"
 import Button from 'components/Button'
 import './pouit.css'
 import AppContext from "../../contexts/AppContext"
+import Textarea from "../../components/TextArea"
 
 
 // FIN DES COMPOSANTS ---------------------------------------------------------------------------------------------------------
@@ -38,7 +39,7 @@ const Pouit = () => {
     return(
         <div>
             <form onSubmit={handleSubmit} id="myForm" name="myForm">
-                <textarea type="text" name="textContent" onChange={onTextContentChange} value={pouitContent} />
+                <Textarea name="textContent" change={onTextContentChange} text={pouitContent} />
                 <input type="submit" value="Envoyer" />
             </form>
 

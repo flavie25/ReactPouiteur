@@ -5,7 +5,7 @@ const Textarea  = (props) => {
     return (
         <div >
             <label>{props.textLabel}</label>
-            <textarea value={props.text} onChange={props.change}></textarea>
+            <textarea name={props.name} value={props.text} onChange={props.change}></textarea>
         </div>
     )
 }
