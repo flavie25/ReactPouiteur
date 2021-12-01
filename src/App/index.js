@@ -24,17 +24,14 @@ function App() {
     setPouitLiked([newLike, ...pouitLiked])
   }
 
-  // const pouitlike = (pouitId) =>{
-  //   console.log("bru")
-  //   // if(pouits[pouitId].like == false){
-  //   //   setPouits[pouitId].like = true
-  //   //   console.log("liker")
-  //   // }
-  //   // else{
-  //   //   setPouits[pouitId].like = false
-  //   //   console.log("dislkier")
-  //   // }
-  // }
+  const likePouit = (pouitId) => {
+    const index = pouits.findIndex((pouit) => pouit.id === pouitId)
+    if (index < 0) return
+  
+    const newPouits = [...pouits]
+    newPouits[index].like = !newPouits[index].like
+    setPouits(newPouits)
+  }
 
   // const likePouit = () =>{
   //   if(pouits.like){
@@ -48,7 +45,7 @@ function App() {
   // }
 
   return (
-    <Context.Provider value={{ pouits, addPouit }}>
+    <Context.Provider value={{ pouits, addPouit, likePouit }}>
       <BrowserRouter>
         <Header />
         <Footer/>
