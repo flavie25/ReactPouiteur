@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import user from './../../Assets/user.png'
 import styles from './profil.module.css'
 import clsx from 'clsx'
 import Button from 'components/Button'
 import Textarea from 'components/TextArea'
 import PouitCard from 'components/PouitCard'
+import AppContext from "../../contexts/AppContext"
 
 
 const LblTxt  = (props) => {
@@ -17,6 +18,7 @@ const LblTxt  = (props) => {
 }
 
 const Profil = () =>{
+    const { pouits, addPouit} = useContext(AppContext)
     const [pseudo, setPseudo] = React.useState('Pseudo')
     const [newpseudo, setNewPseudo] = React.useState('Pseudo')
     const [description, setDesc] = React.useState('Description')
@@ -45,6 +47,14 @@ const Profil = () =>{
         setDeploy(!deploy)
     }
 
+    const TabPouitLike = () => {
+        const tab = pouits.map((pouit) => 
+        {if(pouit.like)
+            return <PouitCard {...pouit} />
+        })
+        return tab
+    }
+
     return (
         <div>
             <div className={styles.profilInfo}>
@@ -61,13 +71,13 @@ const Profil = () =>{
                     <Button onClick={pseudoModify} button="Modifier le pseudo"/>
                 </div>
                 <div className={styles.formWrap}>
-                    <Textarea textLabel="Description" change={lorsDuChangementDesc}></Textarea>
+                    <Textarea textLabel="Description" change={lorsDuChangementDesc} placeholder="Ecrivez votre description..."></Textarea>
                     <Button onClick={descModify} button="Modifier la description"/>
                 </div>
             </div>
             <div className={styles.onglets}>
                 <h2>Mes pouits</h2>
-                <PouitCard pseudo="GrenouilleBoarp" date="18/01 à 18h18" pouit="deded"/>
+                <TabPouitLike/>
                 <h2>Mes Likes</h2>
             </div>
         </div>      

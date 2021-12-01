@@ -31,6 +31,7 @@ function App() {
     const newPouits = [...pouits]
     newPouits[index].like = !newPouits[index].like
     setPouits(newPouits)
+    
   }
 
   // const likePouit = () =>{

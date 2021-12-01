@@ -40,7 +40,7 @@ const Pouit = () => {
     return(
         <div>
             <form onSubmit={handleSubmit} id="myForm" name="myForm">
-                <Textarea name="textContent" textLabel="Nouveau Pouit" change={onTextContentChange} text={pouitContent} />
+                <Textarea name="textContent" textLabel="Nouveau Pouit" change={onTextContentChange} text={pouitContent} placeholder="Ecrivez votre Pouit..." />
                 <input className="inputsend" type="submit" value="Envoyer" />
             </form>
 
