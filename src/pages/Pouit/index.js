@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react"
 import PouitCard from "components/PouitCard"
 import Button from 'components/Button'
 import './pouit.css'
+import Textarea from "../../components/TextArea"
 import AppContext from "../../contexts/AppContext"
 import Textarea from "../../components/TextArea"
 
@@ -40,12 +41,13 @@ const Pouit = () => {
         <div>
             <form onSubmit={handleSubmit} id="myForm" name="myForm">
                 <Textarea name="textContent" change={onTextContentChange} text={pouitContent} />
-                <input type="submit" value="Envoyer" />
+                <input className="inputsend" type="submit" value="Envoyer" />
             </form>
 
 
             <TabPouit/>
 
+            <PouitCard pseudo="ManuREACT" date="30/02 à 19h45" content="Où va Messi quand il est blessé ? ...A LA PHARMESSI MDRRRR" />
             <PouitCard pseudo="GrenouilleBoarp" date="18/01 à 18h18" content="Qu'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan." />
             <PouitCard pseudo="GrenouilleBoarp" date="18/01 à 18h18" content="Qu'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan." />
             <PouitCard pseudo="Flaviie25" date="27/11 à 10h06" content="Qu'est-ce qui est bleu, blanc, rouge ? Un Schrtoumph qui saigne du nez." />
