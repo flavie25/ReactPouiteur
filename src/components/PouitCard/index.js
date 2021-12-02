@@ -5,7 +5,7 @@ import like from './../../Assets/like.png'
 import comment from './../../Assets/chat.png'
 import retweet from './../../Assets/retweet.png'
 import share from './../../Assets/share.png'
-import edit from './../../Assets/edit.png'
+import bin from './../../Assets/bin.png'
 import likefull from './../../Assets/likefull.png'
 import styles from './pouitCard.module.css'
 import AppContext from './../../contexts/AppContext'
@@ -26,7 +26,7 @@ const PouitCard  = (props) => {
             <div className={styles.pouitMiddle}>
                 <p>{props.content}</p>
                 <div className={props.myPouit ? styles.edit : styles.none}>
-                    <Button style={styles.button} onClick={() => deletePouit(props.id)}><img className={styles.pictoLike} src={edit}/></Button>
+                    <Button style={styles.button} onClick={() => deletePouit(props.id)}><img className={styles.pictoLike} src={bin}/></Button>
                 </div>
             </div>
             <div className={styles.pouitEnd}>

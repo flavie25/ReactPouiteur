@@ -51,13 +51,14 @@ function App() {
     const index = pouits.findIndex((pouit) => pouit.id === pouitId)
     if (index < 0) return
 
+
     if(index === 0){
-      const endTab = pouits.splice(index + 1, pouits.length + 1)
+      const endTab = pouits.slice(index + 1, pouits.length + 1)
       setPouits([ ...endTab])
     }
     else{
-    const startTab = pouits.splice(0, index)
-    const endTab = pouits.splice(index, pouits.length)
+    const startTab = pouits.slice(0, index)
+    const endTab = pouits.slice(index +1 , pouits.length)
     setPouits([...startTab, ...endTab])
     }
   }
