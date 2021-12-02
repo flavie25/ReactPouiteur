@@ -19,7 +19,6 @@ function App() {
     { pseudo:'ManuReact', date:<p>27/03/2021 à 10:39</p>, content:'Où va Messi quand il se blesse ? ... A LA PHARMESSI PTDRRRRR', id: 47, like: false, myPouit: false},
     { pseudo:'LotusCheat', date:<p>18/01/2020 à 15:18</p>, content:'Qu\'est-ce qui est bleu, blanc, rouge ? Un Schrtoumph qui saigne du nez.', id:209, like: false, myPouit: false}
     ])
-  const [myPouits, setMyPouits] = useState([])
   const [pseudo, setPseudo] = useState('Pseudo')
   const [newpseudo, setNewPseudo] = useState('Pseudo')
   const [description, setDesc] = useState('Description')
@@ -37,7 +36,6 @@ function App() {
   
   const addPouit = (newPouit) => {
     setPouits([newPouit, ...pouits])
-    setMyPouits([newPouit, ...myPouits])
   }
 
   const likePouit = (pouitId) => {
@@ -64,8 +62,10 @@ function App() {
     }
   }
 
+  console.log(pouits.length)
+
   return (
-    <Context.Provider value={{ pseudo, setPseudo, newpseudo, setNewPseudo, description, setDesc, newdescription, setNewDesc, pouits, myPouits, addPouit, likePouit, pouitsContest, deletePouit }}>
+    <Context.Provider value={{ pseudo, setPseudo, newpseudo, setNewPseudo, description, setDesc, newdescription, setNewDesc, pouits, addPouit, likePouit, pouitsContest, deletePouit }}>
       <BrowserRouter>
         <Header />
         <Footer/>
