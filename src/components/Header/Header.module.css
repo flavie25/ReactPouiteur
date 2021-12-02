@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(0, 0, 0);
+  background-color: #A0FF55;
   display: flex;
 
   font-weight: bold;
@@ -8,13 +8,16 @@
   position: fixed;
   top: 0;
   width: 100%;
+  border-bottom: rgba(175, 175, 175, 0.3) solid 1px;
+  
 }
 
 .header p{
   margin:0;
   padding: 0.3em;
   font-size: 1.7em;
-  color: rgb(245, 255, 85);
+  color: black;
+  font-family: 'Righteous', cursive;
 }
 
 
