@@ -5,6 +5,8 @@ import like from './../../Assets/like.png'
 import comment from './../../Assets/chat.png'
 import retweet from './../../Assets/retweet.png'
 import share from './../../Assets/share.png'
+import edit from './../../Assets/edit.png'
+import likefull from './../../Assets/likefull.png'
 import styles from './pouitCard.module.css'
 import AppContext from './../../contexts/AppContext'
 
@@ -21,10 +23,12 @@ const PouitCard  = (props) => {
             </div>
             <div className={styles.pouitMiddle}>
                 <p>{props.content}</p>
-                {props.like && 'liked'}
+                <div className={styles.edit}>
+                    <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={edit}/></Button>
+                </div>
             </div>
             <div className={styles.pouitEnd}>
-                <Button style={styles.button} onClick={() => likePouit(props.id)}><img className={styles.pictoLike} src={like}/></Button>
+                <Button style={styles.button} onClick={() => likePouit(props.id)}>{props.like ? <img className={styles.pictoLike} src={like} /> :  <img className={styles.pictoLike} src={likefull} /> } </Button>
                 <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={comment}/></Button>
                 <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={retweet}/></Button>
                 <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={share}/></Button>

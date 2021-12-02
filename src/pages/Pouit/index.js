@@ -6,10 +6,6 @@ import Textarea from "components/TextArea"
 import AppContext from "../../contexts/AppContext"
 import Datetime from 'react-datetime';
 
-
-
-// FIN DES COMPOSANTS ---------------------------------------------------------------------------------------------------------
-
 const Pouit = () => {
     const { pouits, addPouit, newpseudo } = useContext(AppContext)
     const [pouitContent, setPouitContent] = useState('')
