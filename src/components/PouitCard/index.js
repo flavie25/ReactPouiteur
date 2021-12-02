@@ -14,20 +14,20 @@ const PouitCard  = (props) => {
     console.log(props.like)
 
     return (
-        <div id={"pouit-" + props.id} className = "pouitContainer">
-            <div className = "pouitTop">
+        <div id={"pouit-" + props.id} className={styles.pouitContainer}>
+            <div className={styles.pouitTop}>
                 <p>{props.pseudo}</p>
                 <p>{props.date}</p>
             </div>
-            <div className = "pouitMiddle">
+            <div className={styles.pouitMiddle}>
                 <p>{props.content}</p>
                 {props.like && 'liked'}
             </div>
-            <div className = "pouitEnd">
-                <Button class="button" onClick={() => likePouit(props.id)}><img className={styles.pictoLike} src={like}/></Button>
-                <Button class="button" onClick={() => ''}><img className={styles.pictoLike} src={comment}/></Button>
-                <Button class="button" onClick={() => ''}><img className={styles.pictoLike} src={retweet}/></Button>
-                <Button class="button" onClick={() => ''}><img className={styles.pictoLike} src={share}/></Button>
+            <div className={styles.pouitEnd}>
+                <Button style={styles.button} onClick={() => likePouit(props.id)}><img className={styles.pictoLike} src={like}/></Button>
+                <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={comment}/></Button>
+                <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={retweet}/></Button>
+                <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={share}/></Button>
             </div>
         </div>
     )

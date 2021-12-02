@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react"
 import PouitCard from "components/PouitCard"
 import Button from 'components/Button'
-import './pouit.css'
+import styles from './pouit.module.css'
 import Textarea from "components/TextArea"
 import AppContext from "../../contexts/AppContext"
 import Datetime from 'react-datetime';
@@ -43,7 +43,7 @@ const Pouit = () => {
         <div>
             <form onSubmit={handleSubmit} id="myForm" name="myForm">
                 <Textarea name="textContent" textLabel="Nouveau Pouit" change={onTextContentChange} text={pouitContent} placeholder="Ecrivez votre Pouit..." />
-                <input className="inputsend" type="submit" value="Envoyer" />
+                <input className={styles.inputsend} type="submit" value="Envoyer" />
             </form>
             <TabPouit/>
             
