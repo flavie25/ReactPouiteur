@@ -11,7 +11,9 @@ import styles from './pouitCard.module.css'
 import AppContext from './../../contexts/AppContext'
 
 const PouitCard  = (props) => {
-    const {likePouit, newPseudo} = useContext(AppContext)
+    const {likePouit, newPseudo, deletePouit} = useContext(AppContext)
+
+    
 
     console.log(props.like)
 
@@ -24,7 +26,7 @@ const PouitCard  = (props) => {
             <div className={styles.pouitMiddle}>
                 <p>{props.content}</p>
                 <div className={props.myPouit ? styles.edit : styles.none}>
-                    <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={edit}/></Button>
+                    <Button style={styles.button} onClick={() => deletePouit(props.id)}><img className={styles.pictoLike} src={edit}/></Button>
                 </div>
             </div>
             <div className={styles.pouitEnd}>

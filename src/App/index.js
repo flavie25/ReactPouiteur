@@ -39,8 +39,23 @@ function App() {
     setPouits(newPouits)
   }
 
+  const deletePouit = (pouitId) => {
+    const index = pouits.findIndex((pouit) => pouit.id === pouitId)
+    if (index < 0) return
+
+    if(index === 0){
+      const endTab = pouits.splice(index + 1, pouits.length + 1)
+      setPouits([ ...endTab])
+    }
+    else{
+    const startTab = pouits.splice(0, index)
+    const endTab = pouits.splice(index, pouits.length)
+    setPouits([...startTab, ...endTab])
+    }
+  }
+
   return (
-    <Context.Provider value={{ pseudo, setPseudo, newpseudo, setNewPseudo, description, setDesc, newdescription, setNewDesc, pouits, myPouits, addPouit, likePouit }}>
+    <Context.Provider value={{ pseudo, setPseudo, newpseudo, setNewPseudo, description, setDesc, newdescription, setNewDesc, pouits, myPouits, addPouit, likePouit, deletePouit }}>
       <BrowserRouter>
         <Header />
         <Footer/>
