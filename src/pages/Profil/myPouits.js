@@ -12,7 +12,17 @@ const MyPouits = () =>{
         const tab = myPouits.map((pouit) => (
             <PouitCard {...pouit} />
         ))
-        return tab
+       
+       
+        if(tab.length === 0){
+            console.log("pouit")
+            return <p>Pas de pouits</p>
+            
+        }
+        else{
+            return tab
+        }
+        
     }
 
     return (

@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
+import AppContext from '../../contexts/AppContext';
+import PouitCard from 'components/PouitCard'
 
 const Contest = () =>{
-    return [
-        <h1>Hello world </h1>
-    ]
+
+    const {pouitsContest} = useContext(AppContext)
+
+    return (
+        <div>
+            {pouitsContest.map((pouit) => (
+            <PouitCard {...pouit} />
+        ))}
+        </div>
+    )
 }
 
 export default Contest

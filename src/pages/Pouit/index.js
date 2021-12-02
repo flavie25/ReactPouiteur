@@ -21,6 +21,7 @@ const Pouit = () => {
             like: false,
             myPouit: true
         }
+        setPouitContent('')
         addPouit(newPouit)
     }
     const onTextContentChange = (e) => {
