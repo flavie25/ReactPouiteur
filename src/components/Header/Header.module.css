@@ -1,5 +1,5 @@
 .header {
-  background-color: #73c088;
+  background-color: #00CF86;
   display: flex;
 
   font-weight: bold;
@@ -17,7 +17,7 @@
   padding: 0.3em;
   font-size: 1.7em;
   color: black;
-  font-family: 'Righteous', cursive;
+  font-family: 'Fredoka One', cursive;
 }
 
 
