@@ -1,5 +1,5 @@
 .footer {
-  background-color: #73c088;
+  background-color: #1B4332;
   border-top: #06373a6c  solid 2px;
   display: flex;
   color: gray;
@@ -15,14 +15,15 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: white;
 }
 
 .footerItems a{
   text-decoration: none;
-  color: #000;
+  color: #00CF86;
   margin: 0;
   padding: 0;
+  font-weight: bold;
 }
 
 .footerItem {
@@ -33,7 +34,7 @@
 }
 
 .footerItem:nth-child(2){
-  border: 0 1px solid black;
+  border: 0 1px solid white;
 }
 
 .footerLogo{

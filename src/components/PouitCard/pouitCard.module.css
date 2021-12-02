@@ -12,16 +12,18 @@
     justify-content: space-between;
     padding: 0em 1em;
     border-bottom: #06373a40  solid 1px;
-    background-color: #49B265;
+    background-color: #7BE495;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     font-size: 13px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
 }
 
 .pouitMiddle{
     text-align: center;
     padding: 1em 2em;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

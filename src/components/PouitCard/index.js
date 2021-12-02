@@ -28,7 +28,7 @@ const PouitCard  = (props) => {
                 </div>
             </div>
             <div className={styles.pouitEnd}>
-                <Button style={styles.button} onClick={() => likePouit(props.id)}>{props.like ? <img className={styles.pictoLike} src={like} /> :  <img className={styles.pictoLike} src={likefull} /> } </Button>
+                <Button style={styles.button} onClick={() => likePouit(props.id)}>{props.like ? <img className={styles.pictoLike} src={likefull} /> :  <img className={styles.pictoLike} src={like} /> } </Button>
                 <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={comment}/></Button>
                 <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={retweet}/></Button>
                 <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={share}/></Button>
