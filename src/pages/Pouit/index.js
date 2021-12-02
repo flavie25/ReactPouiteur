@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react"
 import PouitCard from "components/PouitCard"
-import Button from 'components/Button'
 import styles from './pouit.module.css'
 import Textarea from "components/TextArea"
 import AppContext from "../../contexts/AppContext"
@@ -18,7 +17,7 @@ const Pouit = () => {
             id: Math.floor(Math.random() * 100),
             content: formData.get('textContent'),
             pseudo: newpseudo,
-            date: '18/01 à 18h18',
+            date: date(),
             like: false
         }
         addPouit(newPouit)
@@ -31,9 +30,21 @@ const Pouit = () => {
         const tab = pouits.map((pouit) => (
             <PouitCard {...pouit} />
         ))
+        
         return tab
     }
-    
+    const date = () => {
+        const d = new Date()
+        let day = d.getDate()
+        let month1 = 1 + d.getMonth()
+        let year = d.getFullYear()
+        let hours = 1 + d.getUTCHours()
+        let minutes = d.getUTCMinutes()
+       return (
+           <p>{day}/{month1}/{year} à {hours}:{minutes}</p>
+       )
+    }
+   
 
     return(
         <div>

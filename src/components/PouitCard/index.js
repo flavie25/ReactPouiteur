@@ -19,7 +19,7 @@ const PouitCard  = (props) => {
         <div id={"pouit-" + props.id} className={styles.pouitContainer}>
             <div className={styles.pouitTop}>
                 <p>{props.pseudo}</p>
-                <p>{props.date}</p>
+                {props.date}
             </div>
             <div className={styles.pouitMiddle}>
                 <p>{props.content}</p>

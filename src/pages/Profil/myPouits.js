@@ -6,17 +6,17 @@ import AppContext from "../../contexts/AppContext"
 
 
 const MyPouits = () =>{
-    const { pouits, addPouit} = useContext(AppContext)
+    const { myPouits} = useContext(AppContext)
     
-    const TabPouitLike = () => {
-        const tab = pouits.map((pouit) => (
+    const TabMyPouit = () => {
+        const tab = myPouits.map((pouit) => (
             <PouitCard {...pouit} />
         ))
         return tab
     }
 
     return (
-        <TabPouitLike/>
+        <TabMyPouit/>
     )
 }
 
