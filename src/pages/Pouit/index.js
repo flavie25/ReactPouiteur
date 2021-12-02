@@ -18,7 +18,8 @@ const Pouit = () => {
             content: formData.get('textContent'),
             pseudo: newpseudo,
             date: date(),
-            like: false
+            like: false,
+            myPouit: true
         }
         addPouit(newPouit)
     }

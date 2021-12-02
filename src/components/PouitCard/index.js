@@ -11,7 +11,7 @@ import styles from './pouitCard.module.css'
 import AppContext from './../../contexts/AppContext'
 
 const PouitCard  = (props) => {
-    const {likePouit} = useContext(AppContext)
+    const {likePouit, newPseudo} = useContext(AppContext)
 
     console.log(props.like)
 
@@ -23,12 +23,12 @@ const PouitCard  = (props) => {
             </div>
             <div className={styles.pouitMiddle}>
                 <p>{props.content}</p>
-                <div className={styles.edit}>
+                <div className={props.myPouit ? styles.edit : styles.none}>
                     <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={edit}/></Button>
                 </div>
             </div>
             <div className={styles.pouitEnd}>
-                <Button style={styles.button} onClick={() => likePouit(props.id)}>{props.like ? <img className={styles.pictoLike} src={like} /> :  <img className={styles.pictoLike} src={likefull} /> } </Button>
+                <Button style={styles.button} onClick={() => likePouit(props.id)}>{props.like ? <img className={styles.pictoLike} src={likefull} /> :  <img className={styles.pictoLike} src={like} /> } </Button>
                 <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={comment}/></Button>
                 <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={retweet}/></Button>
                 <Button style={styles.button} onClick={() => ''}><img className={styles.pictoLike} src={share}/></Button>

@@ -15,9 +15,9 @@ import PouitCard from "./../components/PouitCard"
 
 function App() {
   const [pouits, setPouits] = useState([
-    { pseudo:'GrenouilleBoarp', date:<p>3/10/2021 à 20:46</p>, content:'Qu\'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan.', id:33, like: false},
-    { pseudo:'ManuReact', date:<p>27/03/2021 à 10:39</p>, content:'Où va Messi quand il se blesse ? ... A LA PHARMESSI PTDRRRRR', id: 47, like: false},
-    { pseudo:'Flaviie25', date:<p>18/01/2020 à 15:18</p>, content:'Qu\'est-ce qui est bleu, blanc, rouge ? Un Schrtoumph qui saigne du nez.', id:209, like: false}
+    { pseudo:'GrenouilleBoarp', date:<p>3/10/2021 à 20:46</p>, content:'Qu\'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan.', id:33, like: false, myPouit: false},
+    { pseudo:'ManuReact', date:<p>27/03/2021 à 10:39</p>, content:'Où va Messi quand il se blesse ? ... A LA PHARMESSI PTDRRRRR', id: 47, like: false, myPouit: false},
+    { pseudo:'Flaviie25', date:<p>18/01/2020 à 15:18</p>, content:'Qu\'est-ce qui est bleu, blanc, rouge ? Un Schrtoumph qui saigne du nez.', id:209, like: false, myPouit: false}
     ])
   const [myPouits, setMyPouits] = useState([])
   const [pseudo, setPseudo] = React.useState('Pseudo')

@@ -50,3 +50,7 @@ img{
 .edit{
     text-align: right;
 }
+
+.none{
+    display: none;
+}
