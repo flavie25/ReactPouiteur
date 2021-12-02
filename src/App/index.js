@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import './App.css';
 
@@ -15,11 +15,15 @@ import PouitCard from "./../components/PouitCard"
 
 function App() {
   const [pouits, setPouits] = useState([
-    { pseudo:'GrenouilleBoarp', date:'18/01 à 18h18', content:'Qu\'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan.', like: false},
-    { pseudo:'ManuReact', date:'18/01 à 18h18', content:'Où va Messi quand il se blesse ? ... A LA PHARMESSI PTDRRRRR', like: false},
-    { pseudo:'Flaviie25', date:'27/11 à 10h06', content:'Qu\'est-ce qui est bleu, blanc, rouge ? Un Schrtoumph qui saigne du nez.', like: false}
+    { pseudo:'GrenouilleBoarp', date:'18/01 à 18h18', content:'Qu\'est-ce qui fait NIOC NIOC ? Un canard qui essaye de parler en verlan.', id:33, like: false},
+    { pseudo:'ManuReact', date:'18/01 à 18h18', content:'Où va Messi quand il se blesse ? ... A LA PHARMESSI PTDRRRRR', id: 47, like: false},
+    { pseudo:'Flaviie25', date:'27/11 à 10h06', content:'Qu\'est-ce qui est bleu, blanc, rouge ? Un Schrtoumph qui saigne du nez.', id:209, like: false}
     ])
   const [pouitLiked, setPouitLiked] = useState([])
+  const [pseudo, setPseudo] = React.useState('Pseudo')
+  const [newpseudo, setNewPseudo] = React.useState('Pseudo')
+  const [description, setDesc] = React.useState('Description')
+  const [newdescription, setNewDesc] = React.useState('Description')
   
   const addPouit = (newPouit) => {
     setPouits([newPouit, ...pouits])
@@ -39,19 +43,8 @@ function App() {
     
   }
 
-  // const likePouit = () =>{
-  //   if(pouits.like){
-  //       pouits.like = false
-  //       // console.log(pouits.date)
-  //   }
-  //   else{
-  //       pouits.like = true
-  //       // console.log( pouits.like)
-  //   }   
-  // }
-
   return (
-    <Context.Provider value={{ pouits, addPouit, likePouit }}>
+    <Context.Provider value={{ pseudo, setPseudo, newpseudo, setNewPseudo, description, setDesc, newdescription, setNewDesc, pouits, addPouit, likePouit }}>
       <BrowserRouter>
         <Header />
         <Footer/>

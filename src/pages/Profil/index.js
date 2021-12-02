@@ -6,7 +6,8 @@ import Button from 'components/Button'
 import Textarea from 'components/TextArea'
 import PouitCard from 'components/PouitCard'
 import AppContext from "../../contexts/AppContext"
-
+import MyPouits from './myPouits'
+import MyLikes from './myLikes'
 
 const LblTxt  = (props) => {
     return (
@@ -18,12 +19,9 @@ const LblTxt  = (props) => {
 }
 
 const Profil = () =>{
-    const { pouits, addPouit} = useContext(AppContext)
-    const [pseudo, setPseudo] = React.useState('Pseudo')
-    const [newpseudo, setNewPseudo] = React.useState('Pseudo')
-    const [description, setDesc] = React.useState('Description')
-    const [newdescription, setNewDesc] = React.useState('Description')
-    const [deploy, setDeploy] = React.useState(false)
+    const {pseudo, setPseudo, newpseudo, setNewPseudo, description, setDesc, newdescription, setNewDesc} = useContext(AppContext)
+    const [deployProfil, setDeployProfil] = React.useState(false)
+    const [deployMyPouit, setDeployMyPouit] = React.useState(true)
     
     const lorsDuChangementPseudo = (event) => {
         const newPseudo = event.target.value
@@ -44,16 +42,17 @@ const Profil = () =>{
     }
 
     const profilModify = () =>{
-        setDeploy(!deploy)
+        setDeployProfil(!deployProfil)
     }
 
-    const TabPouitLike = () => {
-        const tab = pouits.map((pouit) => 
-        {if(pouit.like)
-            return <PouitCard {...pouit} />
-        })
-        return tab
+    const openMyPouits = () =>{
+        setDeployMyPouit(true)
     }
+
+    const openMyLikes = () =>{
+        setDeployMyPouit(false)
+    }
+
 
     return (
         <div>
@@ -65,7 +64,7 @@ const Profil = () =>{
                 <p>{newdescription}</p>
                 <Button style={styles.button} onClick={profilModify} button="Modifier le profil"/>    
             </div> 
-            <div className={clsx(styles.formNotDeploy, {[styles.form]: deploy})}>
+            <div className={clsx(styles.NotDeploy, {[styles.deploy]: deployProfil})}>
                 <div className={styles.formWrap}>
                     <LblTxt textLabel="Pseudo"  surchange={lorsDuChangementPseudo} placeholder="Entrez votre pseudo..."/>
                     <Button style={styles.button} onClick={pseudoModify} button="Modifier le pseudo"/>
@@ -76,10 +75,22 @@ const Profil = () =>{
                 </div>
             </div>
             <div className={styles.onglets}>
-                <Button style={styles.buttonLink} onClick={profilModify} button="Mes Pouits"/> 
-                <h2>Mes pouits</h2>
-                <TabPouitLike/>
-                <h2>Mes Likes</h2>
+                <div className={styles.ongletsButton}>
+                    <Button style={styles.buttonLink} onClick={openMyPouits} button="Mes Pouits"/>
+                    <Button style={styles.buttonLink} onClick={openMyLikes} button="Mes Likes"/>
+                </div>
+                <div className={styles.ongletContainer}>
+                    <div className={clsx(styles.NotDeploy, {[styles.deploy]: deployMyPouit})}>
+                        <MyPouits />
+                    </div> 
+                </div>
+
+                <div className={styles.ongletContainer}>
+                    <div className={clsx(styles.NotDeploy, {[styles.deploy]: !deployMyPouit})}>
+                        <MyLikes />
+                    </div> 
+                </div>
+                
             </div>
         </div>      
     )

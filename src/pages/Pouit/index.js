@@ -4,13 +4,14 @@ import Button from 'components/Button'
 import './pouit.css'
 import Textarea from "components/TextArea"
 import AppContext from "../../contexts/AppContext"
+import Datetime from 'react-datetime';
 
 
 
 // FIN DES COMPOSANTS ---------------------------------------------------------------------------------------------------------
 
 const Pouit = () => {
-    const { pouits, addPouit } = useContext(AppContext)
+    const { pouits, addPouit, newpseudo } = useContext(AppContext)
     const [pouitContent, setPouitContent] = useState('')
     
     const handleSubmit = (e) => {
@@ -20,7 +21,7 @@ const Pouit = () => {
         const newPouit = {
             id: Math.floor(Math.random() * 100),
             content: formData.get('textContent'),
-            pseudo: 'GrenouilleBoarp',
+            pseudo: newpseudo,
             date: '18/01 à 18h18',
             like: false
         }
@@ -36,7 +37,7 @@ const Pouit = () => {
         ))
         return tab
     }
-
+    
 
     return(
         <div>
@@ -44,7 +45,6 @@ const Pouit = () => {
                 <Textarea name="textContent" textLabel="Nouveau Pouit" change={onTextContentChange} text={pouitContent} placeholder="Ecrivez votre Pouit..." />
                 <input className="inputsend" type="submit" value="Envoyer" />
             </form>
-
             <TabPouit/>
             
         </div>

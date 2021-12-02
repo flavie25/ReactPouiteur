@@ -17,16 +17,18 @@
 }
 
 
-.formNotDeploy{
+.NotDeploy{
     display: flex;
     flex-direction: column;
-    height: 2px;
+    height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
     
-.form{
+.deploy{
+    display: flex;
+    flex-direction: column;
     transition: 0.3s ease-in-out;
     height: auto;
     opacity: 1;
@@ -59,7 +61,18 @@ input{
 .onglets{
     display: flex;
     padding: 0.5em 1em;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ongletsButton{
+    display: flex;
     justify-content: space-around;
+}
+
+.ongletContainer{
+    display: flex;
+    flex-direction: column;
 }
 
 .button{
