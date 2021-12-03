@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './footer.module.css'
 import trophee from './../../Assets/trophee.png'
-import homepage from './../../Assets/homepage.png'
+import home from './../../Assets/homepage.png'
 import profil from './../../Assets/profil.png'
 
 const Footer = () => {
@@ -13,7 +13,7 @@ const Footer = () => {
         <Link to="/contest" className={styles.footerItem}>Concours</Link>
       </div>
       <div className={styles.footerItems}>
-        <Link to="/pouit" className={styles.footerItem}><img className={styles.footerLogo} src={homepage} alt="logo home"/></Link>
+        <Link to="/pouit" className={styles.footerItem}><img className={styles.footerLogo} src={home} alt="logo home"/></Link>
         <Link to="/pouit" className={styles.footerItem}>Feed</Link>
       </div>
       <div className={styles.footerItems}>
