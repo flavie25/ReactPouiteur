@@ -4,7 +4,6 @@ import styles from './profil.module.css'
 import clsx from 'clsx'
 import Button from 'components/Button'
 import Textarea from 'components/TextArea'
-import PouitCard from 'components/PouitCard'
 import AppContext from "../../contexts/AppContext"
 import MyPouits from './myPouits'
 import MyLikes from './myLikes'
@@ -58,7 +57,7 @@ const Profil = () =>{
         <div>
             <div className={styles.profilInfo}>
                 <div className={styles.imgProfil}>
-                    <img className={styles.imgUser} src={user} alt="photo de profil"/>
+                    <img className={styles.imgUser} src={user} alt="logo de profil"/>
                 </div>
                 <h1>{newpseudo}</h1>
                 <p>{newdescription}</p>

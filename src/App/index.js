@@ -11,7 +11,6 @@ import Pouit from 'pages/Pouit'
 import Contest from "pages/Contest";
 
 import Context from "../contexts/AppContext";
-import PouitCard from "./../components/PouitCard"
 
 function App() {
   const [pouits, setPouits] = useState([
@@ -23,7 +22,7 @@ function App() {
   const [newpseudo, setNewPseudo] = useState('Pseudo')
   const [description, setDesc] = useState('Description')
   const [newdescription, setNewDesc] = useState('Description')
-  const [pouitsContest, setPouitsContest] = useState([
+  const [pouitsContest] = useState([
     { pseudo:'SteakChicken', date:<p>3/10/2021 à 20:46</p>, content:'Quelle mamie fait peur aux voleurs ? Mamie Traillette.', id:1, like: false, myPouit: false},
     { pseudo:'CheatPredator', date:<p>27/03/2021 à 10:39</p>, content:'J\'ai une blague sur les magasins...Mais elle a pas supermarché', id: 145, like: false, myPouit: false},
     { pseudo:'CraftPotato', date:<p>18/01/2021 à 15:18</p>, content:'Pourquoi est-ce c\'est difficile de conduire dans le Nord ? Parce que les voitures arrêtent PAS DE CALER.', id:219, like: false, myPouit: false},
