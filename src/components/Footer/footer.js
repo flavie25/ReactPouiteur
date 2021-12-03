@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './footer.module.css'
 import trophee from './../../Assets/trophee.png'
-import home from './../../Assets/homepage.png'
+import home from './../../Assets/home.png'
 import profil from './../../Assets/profil.png'
 
 const Footer = () => {
