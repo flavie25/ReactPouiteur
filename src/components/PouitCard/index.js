@@ -11,11 +11,7 @@ import AppContext from './../../contexts/AppContext'
 
 const PouitCard  = (props) => {
     const {likePouit, deletePouit} = useContext(AppContext)
-
     
-
-    console.log(props.like)
-
     return (
         <div id={"pouit-" + props.id} className={styles.pouitContainer}>
             <div className={styles.pouitTop}>

@@ -9,6 +9,7 @@
   bottom: 0;
   width: 100%;
   padding: 0.5em 0;
+  z-index: 100;
 }
 .footerItems {
   display: flex;
@@ -18,7 +19,7 @@
   color: white;
 }
 
-.footerItems a{
+.footerItems p{
   text-decoration: none;
   color: #00CF86;
   margin: 0;
@@ -33,9 +34,6 @@
   padding: 1em 0;
 }
 
-.footerItem:nth-child(2){
-  border: 0 1px solid white;
-}
 
 .footerLogo{
   width: 30%;

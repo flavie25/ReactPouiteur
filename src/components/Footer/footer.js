@@ -8,19 +8,24 @@ import profil from './../../Assets/profil.png'
 const Footer = () => {
   return (
     <div className={styles.footer}>
-      <div className={styles.footerItems}>
-        <Link to="/contest" className={styles.footerItem}><img className={styles.footerLogo} src={trophee} alt="logo concours"/></Link>
-        <Link to="/contest" className={styles.footerItem}>Concours</Link>
-      </div>
-      <div className={styles.footerItems}>
-        <Link to="/pouit" className={styles.footerItem}><img className={styles.footerLogo} src={home} alt="logo home"/></Link>
-        <Link to="/pouit" className={styles.footerItem}>Feed</Link>
-      </div>
-      <div className={styles.footerItems}>
-        <Link to="/profil" className={styles.footerItem}><img className={styles.footerLogo} src={profil} alt="logo profil"/></Link>
-        <Link to="/profil" className={styles.footerItem}>Compte</Link>
-      </div>
-      
+      <Link to="/contest" className={styles.footerItem}>
+        <div className={styles.footerItems}>
+          <img className={styles.footerLogo} src={trophee} alt="logo concours"/>
+          <p className={styles.footerItem}>Concours</p>
+        </div>
+      </Link>
+      <Link to="/pouit" className={styles.footerItem}>
+        <div className={styles.footerItems}>
+          <img className={styles.footerLogo} src={home} alt="logo home"/>
+          <p className={styles.footerItem}>Feed</p>
+        </div>
+      </Link>
+      <Link to="/profil" className={styles.footerItem}>
+        <div className={styles.footerItems}>
+          <img className={styles.footerLogo} src={profil} alt="logo profil"/>
+          <p className={styles.footerItem}>Compte</p>
+        </div>  
+      </Link>
     </div>
   )
 }

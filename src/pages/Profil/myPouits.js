@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
-import { useContext } from "react";
+import { useEffect, useState } from "react"
+import { useContext } from "react"
 import PouitCard from 'components/PouitCard'
-import AppContext from "../../contexts/AppContext"
-
-
+import AppContext from '../../contexts/AppContext'
+import style from './profil.module.css'
+import AddPouit from 'components/AddPouit'
+import ShowPouits from "../../components/ShowPouits"
 
 const MyPouits = () =>{
     const {pouits} = useContext(AppContext)
     const [myPouits, setMyPouits] = useState([])
+    
 
     useEffect(() => {
         setMyPouits([...pouits].filter(pouit => pouit.myPouit));
@@ -16,10 +18,9 @@ const MyPouits = () =>{
 
     return (
         <>
-        {myPouits.length <= 0 && <div>No like!</div>}
-        {myPouits.map((myPouit, key) => {
-            return  <PouitCard {...myPouit} />
-        })}
+        <AddPouit/>
+        {myPouits.length <= 0 && <div className={style.message}>Vous n'avez encore rien posté</div>}
+        <ShowPouits pouits={myPouits}/>
         </>
     )
 }

@@ -1,33 +1,26 @@
-import React, { useContext } from 'react'
-import user from './../../Assets/user.png'
-import styles from './profil.module.css'
+import React, { useContext, useState } from 'react'
+import AppContext from '../../contexts/AppContext'
 import clsx from 'clsx'
+import styles from './profil.module.css'
 import Button from 'components/Button'
+import LblTxt from 'components/InputLabel'
 import Textarea from 'components/TextArea'
-import AppContext from "../../contexts/AppContext"
 import MyPouits from './myPouits'
 import MyLikes from './myLikes'
+import user from './../../Assets/user.png'
 
-const LblTxt  = (props) => {
-    return (
-        <div className={styles.formItem}>
-            <label>{props.textLabel}</label>
-            <input value={props.valeur} onChange={props.surchange} placeholder={props.placeholder}></input>
-        </div>
-    )
-}
 
 const Profil = () =>{
     const {pseudo, setPseudo, newpseudo, setNewPseudo, description, setDesc, newdescription, setNewDesc} = useContext(AppContext)
-    const [deployProfil, setDeployProfil] = React.useState(false)
-    const [deployMyPouit, setDeployMyPouit] = React.useState(true)
+    const [deployProfil, setDeployProfil] = useState(false)
+    const [deployMyPouit, setDeployMyPouit] = useState(true)
     
-    const lorsDuChangementPseudo = (event) => {
+    const onChangePseudo = (event) => {
         const newPseudo = event.target.value
         setPseudo(newPseudo)
     }
 
-    const lorsDuChangementDesc = (event) => {
+    const onChangeDesc = (event) => {
         const newdescription = event.target.value
         setDesc(newdescription)
     }
@@ -65,11 +58,11 @@ const Profil = () =>{
             </div> 
             <div className={clsx(styles.NotDeploy, {[styles.deploy]: deployProfil})}>
                 <div className={styles.formWrap}>
-                    <LblTxt textLabel="Pseudo"  surchange={lorsDuChangementPseudo} placeholder="Entrez votre pseudo..."/>
+                    <LblTxt textLabel="Pseudo"  surchange={onChangePseudo} placeholder="Entrez votre pseudo..."/>
                     <Button style={styles.button} onClick={pseudoModify} button="Modifier le pseudo"/>
                 </div>
                 <div className={styles.formWrap}>
-                    <Textarea textLabel="Description" change={lorsDuChangementDesc} placeholder="Ecrivez votre description..."></Textarea>
+                    <Textarea textLabel="Description" change={onChangeDesc} placeholder="Ecrivez votre description..."></Textarea>
                     <Button  style={styles.button} onClick={descModify} button="Modifier la description"/>
                 </div>
             </div>
@@ -83,13 +76,11 @@ const Profil = () =>{
                         <MyPouits />
                     </div> 
                 </div>
-
                 <div className={styles.ongletContainer}>
                     <div className={clsx(styles.NotDeploy, {[styles.deploy]: !deployMyPouit})}>
                         <MyLikes />
                     </div> 
-                </div>
-                
+                </div>     
             </div>
         </div>      
     )

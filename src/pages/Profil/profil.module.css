@@ -106,6 +106,14 @@ input{
     font-weight: bold;
 }
 
+.message{
+    text-align: center;
+    padding: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+
 @media (min-width: 900px) {
 
     .footerLogo{
