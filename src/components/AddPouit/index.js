@@ -4,7 +4,7 @@ import Textarea from "components/TextArea"
 import AppContext from "../../contexts/AppContext"
 
 const AddPouit = () => {
-    const { pouits, addPouit, newpseudo } = useContext(AppContext)
+    const {addPouit, newpseudo } = useContext(AppContext)
     const [pouitContent, setPouitContent] = useState('')
     
     const handleSubmit = (e) => {

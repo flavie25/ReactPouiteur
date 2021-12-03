@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react"
-import { useContext } from "react"
-import PouitCard from 'components/PouitCard'
+import { useEffect, useState, useContext } from 'react'
 import AppContext from '../../contexts/AppContext'
 import style from './profil.module.css'
 import AddPouit from 'components/AddPouit'
-import ShowPouits from "../../components/ShowPouits"
+import ShowPouits from 'components/ShowPouits'
 
 const MyPouits = () =>{
     const {pouits} = useContext(AppContext)
