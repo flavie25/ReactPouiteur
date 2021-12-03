@@ -16,7 +16,7 @@ const Footer = () => {
         <Link to="/contest" className={styles.footerItem}>Concours</Link>
       </div>
       <div className={styles.footerItems}>
-        <Link to="/pouit" className={styles.footerItem}><img className={styles.footerLogo} src={homepage}/></Link>
+        <Link to="/pouit" className={styles.footerItem}><img className={styles.footerLogo} src={home}/></Link>
         <Link to="/pouit" className={styles.footerItem}>Feed</Link>
       </div>
       <div className={styles.footerItems}>
