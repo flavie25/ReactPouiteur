@@ -100,8 +100,8 @@ input{
 .buttonLink:active {
     background: none;
     border: none;
-    border-bottom: 2px solid rgb(245, 0, 0);
-    color: red;
+    border-bottom: 2px solid #00CF86;
+    color: #00CF86;
     font-size: 1.3em;
     font-weight: bold;
 }
